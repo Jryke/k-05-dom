@@ -1,5 +1,3 @@
-let mainDOM = document.getElementById('main')
-let mainClassesDOM = document.getElementsByClassName('main')
-let mainClassesDOMArr = Array.from(mainClassesDOM)
+let main = document.getElementById('main')
 
-console.log(mainClassesDOMArr);
+console.log(main.innerHTML)
