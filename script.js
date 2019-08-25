@@ -1,2 +1,2 @@
-let content = document.getElementById('content')
-content.innerHTML = 'Main Content'
+let products = document.getElementById('products')
+products.innerHTML = '<div>1</div><div>2</div>'
