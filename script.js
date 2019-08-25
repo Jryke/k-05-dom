@@ -1,2 +1,4 @@
-let products = document.getElementById('products')
-products.innerHTML = '<div>1</div><div>2</div>'
+let productsArr = Array.from(document.getElementsByClassName('product'))
+let productHolder = document.getElementById('products')
+
+productsArr.forEach(div => productHolder.appendChild(div))
