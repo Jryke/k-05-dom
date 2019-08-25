@@ -1,1 +1,1 @@
-console.log('Now connected')
+let mainDOM = document.getElementById('main')
