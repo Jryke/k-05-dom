@@ -1,1 +1,9 @@
-Array.from(document.getElementsByClassName('selected')).forEach(el => !el.classList.contains('primary') ? el.classList.remove('selected') : null)
+let toggle = (element) => {
+	if (element.classList.contains('on')) {
+		element.classList.remove('on')
+		element.classList.add('off')
+	} else if (element.classList.contains('off')) {
+		element.classList.remove('off')
+		element.classList.add('on')
+	}
+}
