@@ -1,3 +1,2 @@
-let main = document.getElementById('main')
-
-console.log(main.innerHTML)
+let content = document.getElementById('content')
+content.innerHTML = 'Main Content'
