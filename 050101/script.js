@@ -22,11 +22,14 @@
 // document.getElementById('products').innerHTML = '<div>1</div><div>2</div>'
 
 // 050304
-const productsDOM = document.getElementById('products')
-const productClassArr = Array.from(document.getElementsByClassName('product'))
-productClassArr.forEach(el => {
-	// copy inside productsDOM
-	productsDOM.innerHTML += `<div class='product'>${el.innerHTML}</div>`
-	// remove hard coded divs
-	el.parentNode.removeChild(el)
-})
+// const productsDOM = document.getElementById('products')
+// const productClassArr = Array.from(document.getElementsByClassName('product'))
+// productClassArr.forEach(el => {
+// 	// copy inside productsDOM
+// 	productsDOM.innerHTML += `<div class='product'>${el.innerHTML}</div>`
+// 	// remove hard coded divs
+// 	el.parentNode.removeChild(el)
+// })
+
+// 050401
+console.log(document.getElementById('main').classList)
