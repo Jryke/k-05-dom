@@ -19,4 +19,14 @@
 // document.getElementById('content').innerHTML = 'Main Content'
 
 // 050303
-document.getElementById('products').innerHTML = '<div>1</div><div>2</div>'
+// document.getElementById('products').innerHTML = '<div>1</div><div>2</div>'
+
+// 050304
+const productsDOM = document.getElementById('products')
+const productClassArr = Array.from(document.getElementsByClassName('product'))
+productClassArr.forEach(el => {
+	// copy inside productsDOM
+	productsDOM.innerHTML += `<div class='product'>${el.innerHTML}</div>`
+	// remove hard coded divs
+	el.parentNode.removeChild(el)
+})
