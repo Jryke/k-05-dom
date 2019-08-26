@@ -16,4 +16,7 @@
 // console.log(document.getElementById('main').innerHTML)
 
 // 050302
-document.getElementById('content').innerHTML = 'Main Content'
+// document.getElementById('content').innerHTML = 'Main Content'
+
+// 050303
+document.getElementById('products').innerHTML = '<div>1</div><div>2</div>'
