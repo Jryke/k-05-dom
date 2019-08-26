@@ -32,4 +32,9 @@
 // })
 
 // 050401
-console.log(document.getElementById('main').classList)
+// console.log(document.getElementById('main').classList)
+
+// 050402
+Array.from(document.getElementsByClassName('selected')).forEach(el => {
+	el.classList.add('primary')
+})
