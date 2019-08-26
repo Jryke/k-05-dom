@@ -40,4 +40,17 @@
 // })
 
 // 050403
-Array.from(document.getElementsByClassName('selected')).forEach(el => !el.classList.contains('primary') ? el.classList.remove('selected') : null)
+// Array.from(document.getElementsByClassName('selected')).forEach(el => !el.classList.contains('primary') ? el.classList.remove('selected') : null)
+
+// 050501
+const toggle = (el) => {
+	if (el.classList.contains('on')) {
+		el.innerHTML = 'OFF'
+		el.classList.remove('on')
+		el.classList.add('off')
+	} else {
+		el.innerHTML = 'ON'
+		el.classList.remove('off')
+		el.classList.add('on')
+	}
+}
