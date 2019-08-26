@@ -6,5 +6,8 @@
 // console.log(mainDOM)
 
 // 050202
-const mainClassesDOM = document.getElementsByClassName('main')
-console.log(mainClassesDOM)
+// const mainClassesDOM = document.getElementsByClassName('main')
+// console.log(mainClassesDOM)
+
+// 050203
+Array.from(document.getElementsByClassName('main')).forEach(el => console.log(el))
