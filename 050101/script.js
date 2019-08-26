@@ -35,6 +35,9 @@
 // console.log(document.getElementById('main').classList)
 
 // 050402
-Array.from(document.getElementsByClassName('selected')).forEach(el => {
-	el.classList.add('primary')
-})
+// Array.from(document.getElementsByClassName('selected')).forEach(el => {
+// 	el.classList.add('primary')
+// })
+
+// 050403
+Array.from(document.getElementsByClassName('selected')).forEach(el => !el.classList.contains('primary') ? el.classList.remove('selected') : null)
