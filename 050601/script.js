@@ -11,16 +11,14 @@ const oppPlay = () => {
 	}
 }
 
+
+
 // make sure all opponent images have class hidden, remove class hidden from opponent play
 const showOppImg = (id) => {
 	let opponentDOM = document.getElementById('opponent')
 	Array.from(opponentDOM.getElementsByClassName('option')).forEach(el => {
-		if (!el.classList.contains('hidden')) {
-			el.classList.add('hidden')
-		}
-		if (el == document.getElementById(id)) {
-			el.classList.remove('hidden')
-		}
+		!el.classList.contains('hidden') ? el.classList.add('hidden') : null
+		el == document.getElementById(id) ? el.classList.remove('hidden') : null
 	})
 }
 
@@ -30,7 +28,8 @@ const play = (choice) => {
 	let opponentPlay = oppPlay()
 	let result = ''
 	showOppImg(opponentPlay)
-	// rock
+
+	rock
 	if (choice == 'rock') {
 		if (opponentPlay == 'rock') {
 			result = 'Tie'
@@ -42,7 +41,8 @@ const play = (choice) => {
 			result = 'You win!'
 		}
 	}
-	// paper
+
+	paper
 	if (choice == 'paper') {
 		if (opponentPlay == 'rock') {
 			score = score + 1
@@ -54,7 +54,8 @@ const play = (choice) => {
 			result = "You lose!"
 		}
 	}
-	// scissors
+
+	scissors
 	if (choice == 'scissors') {
 		if (opponentPlay == 'rock') {
 			score = score - 1
@@ -66,5 +67,6 @@ const play = (choice) => {
 			result = "Tie"
 		}
 	}
+
 	document.getElementById('outcome').innerHTML = `${result} Score: ${score}`
 }
