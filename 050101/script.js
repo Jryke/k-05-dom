@@ -63,17 +63,28 @@
 // }
 
 // 050503
-const checkEmail = (event) => {
-	event.preventDefault()
-	const inputDOM = document.getElementById('email')
-	const messageDOM = document.getElementById('message')
-	if (inputDOM.value.includes('@')) {
-		messageDOM.innerHTML = 'Thank you for signing up'
-		messageDOM.classList.remove('error')
-		messageDOM.classList.add('success')
-	} else {
-		messageDOM.innerHTML = 'Sorry, please provide a valid email address'
-		messageDOM.classList.remove('success')
-		messageDOM.classList.add('error')
-	}
+// const checkEmail = (event) => {
+// 	event.preventDefault()
+// 	const inputDOM = document.getElementById('email')
+// 	const messageDOM = document.getElementById('message')
+// 	if (inputDOM.value.includes('@')) {
+// 		messageDOM.innerHTML = 'Thank you for signing up'
+// 		messageDOM.classList.remove('error')
+// 		messageDOM.classList.add('success')
+// 	} else {
+// 		messageDOM.innerHTML = 'Sorry, please provide a valid email address'
+// 		messageDOM.classList.remove('success')
+// 		messageDOM.classList.add('error')
+// 	}
+// }
+
+// 050504
+const checkName = (element) => {
+	const nameSpanDOM = Array.from(document.getElementById('name').getElementsByClassName('error'))[0]
+	element.value.length > 2 ? nameSpanDOM.innerHTML = '' : nameSpanDOM.innerHTML = 'At least 3 characters'
+}
+
+const checkPassword = (element) => {
+	const passwordSpanDOM = Array.from(document.getElementById('password').getElementsByClassName('error'))[0]
+	element.value.length > 8 ? passwordSpanDOM.innerHTML = '' : passwordSpanDOM.innerHTML = 'At least 9 characters'
 }
