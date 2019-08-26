@@ -7,8 +7,10 @@
 		<script type="text/javascript" src="script.js" defer></script>
 	</head>
 	<body>
-		<input type="number" class="number" placeholder="Number 1" onkeyup="add()">
-		<input type="number" class="number" placeholder="Number 2" onkeyup="add()">
-		<label>Total: <span id="total"></div></label>
+		<form onsubmit="checkEmail(event)">
+		  <input type="text" id="email">
+		  <span id="message"></span>
+		  <button>Sign up</button>
+		</form>
 	</body>
 </html>

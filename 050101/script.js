@@ -56,8 +56,24 @@
 // }
 
 // 050502
-const add = () => {
-	let inputsArr = Array.from(document.getElementsByClassName('number'))
-	let sum = inputsArr.map(el => el.value).reduce((a,b) => Number(a) + Number(b))
-	document.getElementById('total').innerHTML = sum
+// const add = () => {
+// 	let inputsArr = Array.from(document.getElementsByClassName('number'))
+// 	let sum = inputsArr.map(el => el.value).reduce((a,b) => Number(a) + Number(b))
+// 	document.getElementById('total').innerHTML = sum
+// }
+
+// 050503
+const checkEmail = (event) => {
+	event.preventDefault()
+	const inputDOM = document.getElementById('email')
+	const messageDOM = document.getElementById('message')
+	if (inputDOM.value.includes('@')) {
+		messageDOM.innerHTML = 'Thank you for signing up'
+		messageDOM.classList.remove('error')
+		messageDOM.classList.add('success')
+	} else {
+		messageDOM.innerHTML = 'Sorry, please provide a valid email address'
+		messageDOM.classList.remove('success')
+		messageDOM.classList.add('error')
+	}
 }
