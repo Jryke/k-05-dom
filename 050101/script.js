@@ -10,4 +10,7 @@
 // console.log(mainClassesDOM)
 
 // 050203
-Array.from(document.getElementsByClassName('main')).forEach(el => console.log(el))
+// Array.from(document.getElementsByClassName('main')).forEach(el => console.log(el))
+
+// 050301
+console.log(document.getElementById('main').innerHTML)
