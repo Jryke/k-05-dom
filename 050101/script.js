@@ -13,4 +13,7 @@
 // Array.from(document.getElementsByClassName('main')).forEach(el => console.log(el))
 
 // 050301
-console.log(document.getElementById('main').innerHTML)
+// console.log(document.getElementById('main').innerHTML)
+
+// 050302
+document.getElementById('content').innerHTML = 'Main Content'
