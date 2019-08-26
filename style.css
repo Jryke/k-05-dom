@@ -1,6 +1,6 @@
-.on {
-  background: red;
+.success {
+  color: green;
 }
-.off {
-  background: blue;
+.error {
+  color: red;
 }
