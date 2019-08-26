@@ -43,14 +43,21 @@
 // Array.from(document.getElementsByClassName('selected')).forEach(el => !el.classList.contains('primary') ? el.classList.remove('selected') : null)
 
 // 050501
-const toggle = (el) => {
-	if (el.classList.contains('on')) {
-		el.innerHTML = 'OFF'
-		el.classList.remove('on')
-		el.classList.add('off')
-	} else {
-		el.innerHTML = 'ON'
-		el.classList.remove('off')
-		el.classList.add('on')
-	}
+// const toggle = (el) => {
+// 	if (el.classList.contains('on')) {
+// 		el.innerHTML = 'OFF'
+// 		el.classList.remove('on')
+// 		el.classList.add('off')
+// 	} else {
+// 		el.innerHTML = 'ON'
+// 		el.classList.remove('off')
+// 		el.classList.add('on')
+// 	}
+// }
+
+// 050502
+const add = () => {
+	let inputsArr = Array.from(document.getElementsByClassName('number'))
+	let sum = inputsArr.map(el => el.value).reduce((a,b) => Number(a) + Number(b))
+	document.getElementById('total').innerHTML = sum
 }
